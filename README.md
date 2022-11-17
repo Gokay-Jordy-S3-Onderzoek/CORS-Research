@@ -17,25 +17,25 @@ You can see how the SOP can be very restrictive and prevent some applications fr
 In order to access a server's resource, one needs to send a request. This is what a request might look like:
 
 ```http
-  GET /resources/data HTTP/1.1
-  User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
-  Host: www.slightlyworsebank.com
-  Accept-Language: en-us
-  Accept-Encoding: gzip, deflate
-  Connection: Keep-Alive
-  Origin: https://totallyrealbank.com
+GET /resources/data HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: www.slightlyworsebank.com
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+Origin: https://totallyrealbank.com
 ```
 In this example `totallyrealbank` is sending a `GET` request to `slightlyworsebank`, which is the server. To figure out where the request is coming from, take a look at the `Origin` header. The server might send a response like this: [3^](#sources)
 
 ```http
-  HTTP/1.1 200 OK
-  Date: Mon, 01 Oct 2022 00:23:53 GMT
-  Server: Apache/2
-  Access-Control-Allow-Origin: https://slightlyworsebank.com
-  Keep-Alive: timeout=2, max=100
-  Connection: Keep-Alive
-  Transfer-Encoding: chunked
-  Content-Type: application/xml
+HTTP/1.1 200 OK
+Date: Mon, 01 Oct 2022 00:23:53 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: https://slightlyworsebank.com
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: application/xml
 ```
 
 Take a look at the `Access-Control-Allow-Origin` header. This header will tell you which origin was setup using CORS to be allowed to access resources from `slightlyworsebank`. In this case it's only `slightlyworsebank`. Meaning, if the request comes from any other domain other than `slightlyworsebank`, the request will be rejected. Another value for the `Access-Control-Allow-Origin` header can be `*`, which means that requests from all origins will be allowed to go through, which is not what you want, but more on that later.

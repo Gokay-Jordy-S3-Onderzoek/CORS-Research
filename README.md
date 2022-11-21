@@ -172,6 +172,17 @@ return [
 ];
 ```
 
+## What is the difference between having CORS enabled and disabled?
+
+The internet allows people and companies to connect with each other and share information. That information may be private, which nobody else except the intended origin is allowed to read, or it's public data, allowed to be used for someone's private project or a school assignment.
+
+You have to be in control of which data can be requested by an unknown machine. Your API could be returning private user data or other data used by your own application. You don't want outside origins to be requesting those endpoints. In a case like that you would setup your CORS to only allow the origin of your own application. That would cause all the other origins to receive an error message in their console when they request your resource.
+
+If you request a resource for your own project and get a CORS error, and the server is not yours, there's nothing really you can do. The server has to be setup to allow your origin to make a request.
+
+There's many APIs that serve public data, there's a weather API, movie API, crime statistics API, and many more. APIs like that don't serve data that's private for one application, but rather data for everyone to request and work with. Alot of them don't even require API keys. Those APIs are examples of applications that don't have a strict CORS setup. You would know that, because you receive the data from the server and not that famous CORS error.
+
+
 ## Sources
 
 -   [1^]() Dahan, M. (2021, November 3). *What are cors attacks and how can you prevent them?* Comparitech. Retrieved November 15, 2022, from https://www.comparitech.com/blog/information-security/cors-attacks-prevent/

@@ -172,6 +172,14 @@ return [
 ];
 ```
 
+## Which DOT-framework methods have we used for our research?
+
+### Library
+
+When doing research, you don't have to start from zero. You have to have an understanding of the topic you're researching, but after that you can take a look at work that has already been done by others. That's what the library method is about. Studying existing work can help you understand the solution or help you understand how to create the solution. Maybe the solution you need already exists, in which case, you can use that to your advantage.
+
+After understanding the topic we were researching, we went ahead and went searching for possible solutions and how to implement them. There was alot to find on the internet, and done in different ways too. We used that to understand what the solution was and why it worked, instead of copy + paste'ing everything into your project and moving along. We looked around the solutions to find one that was applicable and suited for our project. After agreeing which one to implement in our project, we used that solution to fix our problem and went ahead and tested it.
+
 ## Sources
 
 -   [1^]() Dahan, M. (2021, November 3). *What are cors attacks and how can you prevent them?* Comparitech. Retrieved November 15, 2022, from https://www.comparitech.com/blog/information-security/cors-attacks-prevent/

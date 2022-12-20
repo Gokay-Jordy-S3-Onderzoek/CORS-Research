@@ -182,14 +182,21 @@ If you request a resource for your own project and get a CORS error, and the ser
 
 There's many APIs that serve public data, there's a weather API, movie API, crime statistics API, and many more. APIs like that don't serve data that's private for one application, but rather data for everyone to request and work with. Alot of them don't even require API keys. Those APIs are examples of applications that don't have a strict CORS setup. You would know that, because you receive the data from the server and not that famous CORS error.
 
-
 ## Our Conclusion
+
 As we've seen troughout this research CORS is a very important part of the internet. For our own application we use multiple servers on different origins. This means that without CORS we would not be able to make requests to our own servers. This is why we need to specify which origins are allowed to make requests to our servers. If we don't do this our application would be vulnerable to attacks from different origins.
 
 
 ## Which DOT-framework methods have we used for our research?
 
+### Library
+
+When doing research, you don't have to start from zero. You have to have an understanding of the topic you're researching, but after that you can take a look at work that has already been done by others. That's what the library method is about. Studying existing work can help you understand the solution or help you understand how to create the solution. Maybe the solution you need already exists, in which case, you can use that to your advantage.
+
+After understanding the topic we were researching, we went ahead and went searching for possible solutions and how to implement them. There was alot to find on the internet, and done in different ways too. We used that to understand what the solution was and why it worked, instead of copy + paste'ing everything into your project and moving along. We looked around the solutions to find one that was applicable and suited for our project. After finding a suitable solution, we had to verify that this source was correct in what it was telling us the solution was. We saved that solution and went around looking at other sources. When we found multiple sources telling us to implement the same solution, we could verify that it was indeed one of the correct solutions. After agreeing which one to implement in our project, we used that solution to fix our problem and went ahead and tested it.
+
 ### Workshop
+
 Before we started typing certain sub questions we first did some Proof of concepts, to see if our ideas would really work in code. This way we can confirm that the sources we find online are reliable. For the first part of this research we modified our own projects to see if CORS would behave the way we expected it to. For example we tried to make a request to our own API from a different origin to see if we would receive a CORS error.
 
 For the second part of the research we made a total of 4 small proof of concepts. We made a proof of concept for each framework we wanted to research, so .NET Core, Spring Boot, Node.js and Laravel. We made a small API in each of these frameworks and tried to make a request to it from a different origin. We also tried to make a request to it from the same origin. This way we could see if CORS would behave the way we expected it to.

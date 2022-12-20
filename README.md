@@ -187,6 +187,12 @@ There's many APIs that serve public data, there's a weather API, movie API, crim
 As we've seen troughout this research CORS is a very important part of the internet. For our own application we use multiple servers on different origins. This means that without CORS we would not be able to make requests to our own servers. This is why we need to specify which origins are allowed to make requests to our servers. If we don't do this our application would be vulnerable to attacks from different origins.
 
 
+## Which DOT-framework methods have we used for our research?
+
+### Workshop
+Before we started typing certain sub questions we first did some Proof of concepts, to see if our ideas would really work in code. This way we can confirm that the sources we find online are reliable. For the first part of this research we modified our own projects to see if CORS would behave the way we expected it to. For example we tried to make a request to our own API from a different origin to see if we would receive a CORS error.
+
+For the second part of the research we made a total of 4 small proof of concepts. We made a proof of concept for each framework we wanted to research, so .NET Core, Spring Boot, Node.js and Laravel. We made a small API in each of these frameworks and tried to make a request to it from a different origin. We also tried to make a request to it from the same origin. This way we could see if CORS would behave the way we expected it to.
 
 ## Sources
 
